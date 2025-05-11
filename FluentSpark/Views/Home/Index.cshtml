@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "FluentSpark - Sum Calculator";
+}
+
+<h2>Sum Two Numbers</h2>
+
+<form method="post" asp-action="Index">
+    <label>Number 1:</label>
+    <input type="number" name="num1" required />
+
+    <label>Number 2:</label>
+    <input type="number" name="num2" required />
+
+    <button type="submit">Calculate</button>
+</form>
+
+@if (ViewBag.Sum != null)
+{
+    <h3>Result: @ViewBag.Sum</h3>
+}
